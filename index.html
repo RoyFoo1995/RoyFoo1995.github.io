@@ -328,6 +328,154 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/04/22/react_fiber/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Roy">
+      <meta itemprop="description" content="即使细微如蝴蝶鼓舞，也能煽动千里之飓风。">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蝴蝶效应">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/04/22/react_fiber/" itemprop="url">
+                  图解 React Fiber 机制
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2021-04-22 22:08:37 / 修改时间：22:16:12" itemprop="dateCreated datePublished" datetime="2021-04-22T22:08:37+08:00">2021-04-22</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>在我们去了解React Fiber之前，我们需要先了解到React的渲染机制，从而去探求为什么React会选择推出React Fiber来替换以前的模式。</p>
+<h2 id="React的渲染机制"><a href="#React的渲染机制" class="headerlink" title="React的渲染机制"></a>React的渲染机制</h2><p>React会在内存中维护一棵虚拟的DOM树（V-DOM-TREE）。当数据(state)发生变化时，会自动更新虚拟DOM，生成一棵新的虚拟DOM树。通过 Diff 两棵树来找到变化的部分，从而得到一个更新的集合（Patch），然后将集合加到队列中，最终去批量更新Patch到真实的DOM节点中。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-de478ba837d05e597cbf629b176e2aac_1440w.jpg" alt="img"></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2021/04/22/react_fiber/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+      
+    
+      
+        
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/04/08/css详解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -391,7 +539,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2021-04-22 22:07:29" itemprop="dateModified" datetime="2021-04-22T22:07:29+08:00">2021-04-22</time>
+                <time title="修改时间：2021-04-22 22:14:25" itemprop="dateModified" datetime="2021-04-22T22:14:25+08:00">2021-04-22</time>
               
             
           </span>
@@ -425,979 +573,17 @@
 
       
         
-          
-            <h2 id="CSS-学习"><a href="#CSS-学习" class="headerlink" title="CSS 学习"></a>CSS 学习</h2><div class="title"><br><br>  <div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
+          <h2 id="CSS-学习"><a href="#CSS-学习" class="headerlink" title="CSS 学习"></a>CSS 学习</h2><div class="title"><br><br>  <div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
 
 <p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  层叠与继承<br><br>  </div>
-
-  <div class="children"><br><br>  - <div class="bullet"><br><br>    <div class="bullet-dot"><br><br>    </div>
-
-<pre><code>&lt;/div&gt;
-
-&lt;div class=&quot;content mm-editor&quot;&gt;
-
-层叠
-
-&lt;/div&gt;
-
-&lt;div class=&quot;note mm-editor&quot;&gt;
-
-当应用两条同级别的规则到一个元素的时候，写在后面的规则会全部生效，也会替换掉前面定义过的属性
-
-&lt;/div&gt;
-</code></pre><ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>优先级<br><br></div>
-
-<div class="note mm-editor"><br><br>浏览器会根据优先级来选择使用那个规则。例如：元素选择器不够具体，优先级就会低于类选择器<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  计算规则<br><br>  </div>
-
-  <div class="children"><br><br>  - <div class="bullet"><br><br>    <div class="bullet-dot"><br><br>    </div>
-
-<pre><code>&lt;/div&gt;
-
-&lt;div class=&quot;content mm-editor&quot;&gt;
-
-直接声明在 style 属性，得分为千
-
-&lt;/div&gt;
-</code></pre><ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>ID 选择器，得分为百<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>类选择器，属性选择器或者伪类，得分为十<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>元素选择器或者伪元素选择器，得分为一<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>* + > ~ :not 不会影响优先级<br><br></div>
-
-<p></p></li></ul></div><p></p>
-</div></div></li>
-</ul>
-<p></p></div><p></p>
-
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>继承<br><br></div>
-
-<div class="note mm-editor"><br><br>有些属性是可以继承的，有些则不能。例如，color 和 font-family 会被子元素继承，但是 width,margin,padding 和 border 不会被继承<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>控制继承<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  inherit<br><br>  </div>
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>initial<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>unset<br><br></div>
-
-</li>
-</ul>
-<p></p></div><p></p>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>重置属性值<br><br></div>
-
-<div class="note mm-editor"><br><br>使用 all 属性可以重置几乎所有属性，值可以是 inherit, initial,<br>unset, or revert<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>优先级更改<br><br></div>
-
-<div class="note mm-editor"><br><br>使用!import 将会修改属性的优先级<br><br></div>
-
-<p></p></li></div><p></p>
-
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>CSS 选择器<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  选择器列表<br><br>  </div>
-
-  <div class="note mm-editor"><br><br>  通过，隔开<br><br>  </div>
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>选择器种类<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  类型、类和 ID 选择器<br><br>  </div>
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>标签属性选择器<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  a[title]{ }<br><br>  </div>
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>a[href=”<a href="https://example.com&quot;\]{" target="_blank" rel="noopener">https://example.com&quot;\]{</a> }<br><br></div>
-
-</li>
-</ul>
-<p></p></div><p></p>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>伪类与伪元素<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>运算符<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>全局选择器 *<br><br></div>
-
-</li>
-</ul>
-<p></p></div><p></p>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>属性选择器<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  值选择器<br><br>  </div>
-
-  <div class="children"><br><br>  - <div class="bullet"><br><br>    <div class="bullet-dot"><br><br>    </div>
-
-<pre><code>&lt;/div&gt;
-
-&lt;div class=&quot;content mm-editor&quot;&gt;
-
-a\[title\]
-
-&lt;/div&gt;
-
-&lt;div class=&quot;note mm-editor&quot;&gt;
-
-匹配带有名为 title 属性的元素
-
-&lt;/div&gt;
-</code></pre><ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>a[herf=’<a href="https://example.com&#39;\]" target="_blank" rel="noopener">https://example.com&#39;\]</a><br><br></div>
-
-<div class="note mm-editor"><br><br>匹配带有名为 href 属性的元素，其值为<a href="https://example.com" target="_blank" rel="noopener">https://example.com</a><br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>p[class~=’special’]<br><br></div>
-
-<div class="note mm-editor"><br><br>匹配带有名为 class 属性的元素，其值至少有一个和 special 匹配<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>div[lang|=’zh’]<br><br></div>
-
-<div class="note mm-editor"><br><br>匹配带有名为 lang 属性的元素，其值可以为 zh，或者以 zh 开头<br><br></div>
-
-<p></p></li></ul></div><p></p>
-</div></div></li>
-</ul>
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>子字符串匹配选择器<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  li[class^=’box-‘]<br><br>  </div>
-
-  <div class="note mm-editor"><br><br>  匹配以 box-开头的属性元素<br><br>  </div>
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>li[class$=’-box’]<br><br></div>
-
-<div class="note mm-editor"><br><br>匹配以-box 结尾的属性元素<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>li[class*=’box’]<br><br></div>
-
-<div class="note mm-editor"><br><br>匹配任意包含 box 的属性元素<br><br></div>
-
-</li>
-</ul>
-<p></p></div><p></p>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>大小写敏感通过 i 关键字<br><br></div>
-
-<div class="note mm-editor"><br><br>li[class^=’a’ i]<br><br></div>
-
-</li>
-</ul>
-<p></p></div><p></p>
-</li>
-</ul>
-<p></p></div><p></p>
-
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>伪类和伪元素<br><br></div>
-
-<div class="note mm-editor"><br><br>常用列表见<br><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements" target="_blank" rel="noopener">链接</a><br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  简单伪类<br><br>  </div>
-
-  <div class="children"><br><br>  - <div class="bullet"><br><br>    <div class="bullet-dot"><br><br>    </div>
-
-<pre><code>&lt;/div&gt;
-
-&lt;div class=&quot;content mm-editor&quot;&gt;
-
-:first-child
-
-&lt;/div&gt;
-</code></pre><ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>:last-child<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>:only-child<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>:invalid / :valid<br><br></div>
-
-<p></p></li></ul></div><p></p>
-</div></div></li>
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>用户行为伪类<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  :hover<br><br>  </div>
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>:focus<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>:visited<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>:link<br><br></div>
-
-</li>
-</ul>
-<p></p></div><p></p>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>伪元素<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  ::first-line<br><br>  </div>
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>::before<br><br></div>
-
-<div class="note mm-editor"><br><br>通常配合 content 属性使用，用以插入内容<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>::after<br><br></div>
-
-</li>
-</ul>
-<p></p></div><p></p>
-</li>
-</ul>
-<p></p></div><p></p>
-
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>关系选择器<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  后代选择器<br><br>  </div>
-
-  <div class="note mm-editor"><br><br>  使用空格分隔，例如 body article p<br><br>  </div>
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>子代关系选择器<br><br></div>
-
-<div class="note mm-editor"><br><br>使用>分隔，例如 ul > li{}，只会选中 ul 的直接子代中的 li 元素<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>邻接兄弟选择器<br><br></div>
-
-<div class="note mm-editor"><br><br>使用+分隔，例如 a + b， 只会选中某个前一个兄弟节点是 a 的 b 元素<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>通用兄弟选择器<br><br></div>
-
-<div class="note mm-editor"><br><br>使用~分隔，例如 p ~ img，选中所有 p 元素之后的 img 元素<br><br></div>
-
-</li>
-</ul>
-<p></p></div><p></p>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>盒模型<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  块盒子(Block box)<br><br>  </div>
-
-  <div class="note mm-editor"><br><br>  例如：常见的 h1, p 标签<br><br>  </div>
-
-  <div class="children"><br><br>  - <div class="bullet"><br><br>    <div class="bullet-dot"><br><br>    </div>
-
-<pre><code>&lt;/div&gt;
-
-&lt;div class=&quot;content mm-editor&quot;&gt;
-
-会在内联的方向上扩展并占据父容器在该方向上的所有可用空间，绝大多数下会和父容器一样宽
-
-&lt;/div&gt;
-</code></pre><ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>每个块盒子都会换行<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>width 和 height 属性可以发挥作用<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>内边距（padding）, 外边距（margin） 和 边框（border）<br>会将其他元素从当前盒子周围“推开”<br><br></div>
-
-<p></p></li></ul></div><p></p>
-</div></div></li>
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>内联盒子(Inline box)<br><br></div>
-
-<div class="note mm-editor"><br><br>例如：常见的 a,span,em,strong 标签<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  内联盒子不会产生换行<br><br>  </div>
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>width 和 height 属性没有作用<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>垂直方向的内边距、外边距以及边框会被应用但是不会把其他处于<br>inline 状态的盒子推开<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>水平方向的内边距、外边距以及边框会被应用且会把其他处于 inline<br>状态的盒子推开<br><br></div>
-
-</li>
-</ul>
-<p></p></div><p></p>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>盒模型的组成<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  Content box<br><br>  </div>
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>Padding box<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>Border box<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>Margin box<br><br></div>
-
-</li>
-</ul>
-<p></p></div><p></p>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>外边距折叠<br><br></div>
-
-<div class="note mm-editor"><br><br>如果你有两个外边距相接的元素，这些外边距将合并为一个外边距，即最大的单个外边距的大小<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>显示类型<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  display:block<br><br>  </div>
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>display:inline<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>display:flex<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>display:inline-flex<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>display:inline-block<br><br></div>
-
-</li>
-</ul>
-<p></p></div><p></p>
-</li>
-</ul>
-<p></p>
-
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>弹性盒子<br><br></div>
-
-<ul>
-<li><img src="https://api2.mubu.com/v3/document_image/8304a795-b51f-4518-9f38-ed58036a0541-2681753.jpg" alt=""></li>
-</ul>
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  方向<br><br>  </div>
-
-  <div class="children"><br><br>  - <div class="bullet"><br><br>    <div class="bullet-dot"><br><br>    </div>
-
-<pre><code>&lt;/div&gt;
-
-&lt;div class=&quot;content mm-editor&quot;&gt;
-
-flex-direction: column
-
-&lt;/div&gt;
-</code></pre><ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>flex-direction:row<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>flex-direction:row-reverse<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>flex-direction:column-reverse<br><br></div>
-
-<p></p></li></ul></div><p></p>
-</div></div></li>
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>换行<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  flex-wrap:wrap<br><br>  </div>
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>flex: 200px<br><br></div>
-
-<div class="note mm-editor"><br><br>意味每个子元素宽度至少是 200px<br><br></div>
-
-</li>
-</ul>
-<p></p></div><p></p>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>flex-flow: row wrap<br><br></div>
-
-<div class="note mm-editor"><br><br>方向和换行的缩写<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>动态尺寸<br><br></div>
-
-<div class="note mm-editor"><br><br>flex: 1, flex: 2 表示子元素的空间占比<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>水平和垂直对齐<br><br></div>
-
-<div class="note mm-editor"><br><br>div{ display: flex; align-item: center; justify-content:<br>space-around}<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  align-item<br><br>  </div>
-
-  <div class="note mm-editor"><br><br>  控制子项在交叉轴上的位置<br><br>  </div>
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>justify-content<br><br></div>
-
-<div class="note mm-editor"><br><br>控制子项在主轴上的位置，space-around 可以设置子项沿主轴均匀分布，space-between 也是均匀分布，但是不会在两端留下空间<br><br></div>
-
-</li>
-</ul>
-<p></p></div><p></p>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>排序<br><br></div>
-
-<div class="note mm-editor"><br><br>通过设置 order 来调整顺序，order 值越大，显示更靠后<br><br></div>
-
-</li>
-</ul>
-<p></p>
-
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>处理不同方向的文本<br><br></div>
-
-<div class="note mm-editor"><br><br><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions</a><br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>溢出<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  overflow 属性<br><br>  </div>
-
-  <div class="children"><br><br>  - <div class="bullet"><br><br>    <div class="bullet-dot"><br><br>    </div>
-
-<pre><code>&lt;/div&gt;
-
-&lt;div class=&quot;content mm-editor&quot;&gt;
-
-hidden
-
-&lt;/div&gt;
-</code></pre><ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>scorll<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>overflow-y:scorll<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>overlow-x<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>auto<br><br></div>
-
-<p></p></li></ul></div><p></p>
-</div></div></li>
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>尽量在开发阶段就识别到溢出问题<br><br></div>
-
-</li>
-</ul>
-<p></p>
-
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>值与单位<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  数值<br><br>  </div>
-
-  <div class="children"><br><br>  - <div class="bullet"><br><br>    <div class="bullet-dot"><br><br>    </div>
-
-<pre><code>&lt;/div&gt;
-
-&lt;div class=&quot;content mm-editor&quot;&gt;
-
-integer
-
-&lt;/div&gt;
-</code></pre><ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>number<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>dimension<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>percentage<br><br></div>
-
-<p></p></li></ul></div><p></p>
-</div></div></li>
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>长度<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  绝对长度<br><br>  </div>
-
-  <div class="children"><br><br>  - <div class="bullet"><br><br>    <div class="bullet-dot"><br><br>    </div>
-
-<pre><code>&lt;/div&gt;
-
-&lt;div class=&quot;content mm-editor&quot;&gt;
-
-cm
-
-&lt;/div&gt;
-</code></pre><ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>mm<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>Q<br><br></div>
-
-<div class="note mm-editor"><br><br>四分之一毫米<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>in<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>pc<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>pt<br><br></div>
-
-<div class="note mm-editor"><br><br>点<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>px<br><br></div>
-
-<div class="note mm-editor"><br><br>像素<br><br></div>
-
-<p></p></li></ul></div><p></p>
-</div></div></li>
-</ul>
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>相对长度<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  em<br><br>  </div>
-
-  <div class="note mm-editor"><br><br>  在 font-size 中使用的是相对于父元素的字体大小，在其他属性中使用是相对于自身的字体大小，如 width<br><br>  </div>
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>ex<br><br></div>
-
-<div class="note mm-editor"><br><br>字符”x”的高度<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>ch<br><br></div>
-
-<div class="note mm-editor"><br><br>字符 0 的宽度<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>rem<br><br></div>
-
-<div class="note mm-editor"><br><br>根元素的字体大小<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>lh<br><br></div>
-
-<div class="note mm-editor"><br><br>元素的 line-height<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>vw<br><br></div>
-
-<div class="note mm-editor"><br><br>视窗宽度的 1%<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>vh<br><br></div>
-
-<div class="note mm-editor"><br><br>视窗高度的 1%<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>vmin<br><br></div>
-
-<div class="note mm-editor"><br><br>视窗较小尺寸的 1%<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>vmax<br><br></div>
-
-<div class="note mm-editor"><br><br>视窗较大尺寸的 1%<br><br></div>
-
-</li>
-</ul>
-<p></p></div><p></p>
-</li>
-</ul>
-<p></p>
-
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>颜色<br><br></div>
-
-<div class="children"><br><br>- <div class="bullet"><br><br>  <div class="bullet-dot"><br><br>  </div>
-
-<p>  </p></div><p></p>
-  <div class="content mm-editor"><br><br>  十六进制 RGB<br><br>  </div>
-
-  <div class="note mm-editor"><br><br>  #02798b<br><br>  </div>
-
-<ul>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>RGB 和 RGBA<br><br></div>
-
-<div class="note mm-editor"><br><br>rgb(2, 121, 139), rgba(2, 121, 139,.3)<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>HSL 和 HSLA 的值<br><br></div>
-
-</li>
-</ul>
-<p></p></div><p></p>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>图片<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>位置<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>字符串和标识符<br><br></div>
-</li>
-<li><div class="bullet"><br><br><div class="bullet-dot"><br><br></div>
-
-<p></p></div><p></p>
-<div class="content mm-editor"><br><br>函数<br><br></div>
-
-</li>
-
-<p></p>
-<p></p>
-
-
-<div class="publish"><br></div>
-
-          
+  <div class="content mm-editor"><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2021/04/08/css详解/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2805,182 +1991,6 @@ cm
 
       
     
-      
-        
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/17/Android表单处理/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Roy">
-      <meta itemprop="description" content="即使细微如蝴蝶鼓舞，也能煽动千里之飓风。">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="蝴蝶效应">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/05/17/Android表单处理/" itemprop="url">
-                  Android表单处理
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-05-17 23:35:31" itemprop="dateCreated datePublished" datetime="2020-05-17T23:35:31+08:00">2020-05-17</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2021-04-08 23:01:53" itemprop="dateModified" datetime="2021-04-08T23:01:53+08:00">2021-04-08</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="Android技术沉淀"><a href="#Android技术沉淀" class="headerlink" title="Android技术沉淀"></a>Android技术沉淀</h3><h4 id="表单处理"><a href="#表单处理" class="headerlink" title="表单处理"></a>表单处理</h4><p>表单的处理在项目中会经常遇到，在我们POC项目中，也会涉及到处理用户信息的显示与更新，如图 5-1 所示。由于获取用户信息是异步操作，需要调用API，若此时用户在输入框中输入信息，当获取用户信</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/05/17/Android表单处理/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-      
-    
   </section>
 
   
@@ -3032,7 +2042,7 @@ cm
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">39</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
