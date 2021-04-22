@@ -109,6 +109,7 @@
 
 
   <meta name="description" content="在我们去了解React Fiber之前，我们需要先了解到React的渲染机制，从而去探求为什么React会选择推出React Fiber来替换以前的模式。 React的渲染机制React会在内存中维护一棵虚拟的DOM树（V-DOM-TREE）。当数据(state)发生变化时，会自动更新虚拟DOM，生成一棵新的虚拟DOM树。通过 Diff 两棵树来找到变化的部分，从而得到一个更新的集合（Patch）">
+<meta name="keywords" content="react">
 <meta property="og:type" content="article">
 <meta property="og:title" content="图解 React Fiber 机制">
 <meta property="og:url" content="http://yoursite.com/2021/04/22/react_fiber/index.html">
@@ -138,7 +139,7 @@
 <meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_20.webp">
 <meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_21.webp">
 <meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_22.webp">
-<meta property="og:updated_time" content="2021-04-22T14:38:25.915Z">
+<meta property="og:updated_time" content="2021-04-22T14:46:57.618Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图解 React Fiber 机制">
 <meta name="twitter:description" content="在我们去了解React Fiber之前，我们需要先了解到React的渲染机制，从而去探求为什么React会选择推出React Fiber来替换以前的模式。 React的渲染机制React会在内存中维护一棵虚拟的DOM树（V-DOM-TREE）。当数据(state)发生变化时，会自动更新虚拟DOM，生成一棵新的虚拟DOM树。通过 Diff 两棵树来找到变化的部分，从而得到一个更新的集合（Patch）">
@@ -393,7 +394,7 @@
                 
               
 
-              <time title="创建时间：2021-04-22 22:08:37 / 修改时间：22:38:25" itemprop="dateCreated datePublished" datetime="2021-04-22T22:08:37+08:00">2021-04-22</time>
+              <time title="创建时间：2021-04-22 22:08:37 / 修改时间：22:46:57" itemprop="dateCreated datePublished" datetime="2021-04-22T22:08:37+08:00">2021-04-22</time>
             
 
             
@@ -403,6 +404,24 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -559,6 +578,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/react/" rel="tag"># react</a>
+          
+        </div>
       
 
       
@@ -764,7 +789,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">32</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">34</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
