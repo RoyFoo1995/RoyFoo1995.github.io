@@ -116,29 +116,29 @@
 <meta property="og:description" content="在我们去了解React Fiber之前，我们需要先了解到React的渲染机制，从而去探求为什么React会选择推出React Fiber来替换以前的模式。 React的渲染机制React会在内存中维护一棵虚拟的DOM树（V-DOM-TREE）。当数据(state)发生变化时，会自动更新虚拟DOM，生成一棵新的虚拟DOM树。通过 Diff 两棵树来找到变化的部分，从而得到一个更新的集合（Patch）">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://pic1.zhimg.com/80/v2-de478ba837d05e597cbf629b176e2aac_1440w.jpg">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-74f4ef2b039eaf89.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/960/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-cf46ef9ad4978c98.png?imageMogr2/auto-orient/strip|imageView2/2/w/1000/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-45388b36477c49b7.png?imageMogr2/auto-orient/strip|imageView2/2/w/1000/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-6380a17e15af8bd5.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-16a29e59906706ac.png?imageMogr2/auto-orient/strip|imageView2/2/w/1133/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-936a917b73170bfb.png?imageMogr2/auto-orient/strip|imageView2/2/w/840/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-7f25f52285a69792.png?imageMogr2/auto-orient/strip|imageView2/2/w/678/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-55dd868a1b70d193.png?imageMogr2/auto-orient/strip|imageView2/2/w/653/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-7a89bfac109c387a.png?imageMogr2/auto-orient/strip|imageView2/2/w/748/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-3d7d92f6464dfa99.png?imageMogr2/auto-orient/strip|imageView2/2/w/854/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-edc620ea98f5cc1d.png?imageMogr2/auto-orient/strip|imageView2/2/w/854/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-5a6f447132446ebc.png?imageMogr2/auto-orient/strip|imageView2/2/w/763/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-0df5618f46cf63ea.png?imageMogr2/auto-orient/strip|imageView2/2/w/872/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-09d9037d1f9e194e.png?imageMogr2/auto-orient/strip|imageView2/2/w/806/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-03003b0b6892ddf7.png?imageMogr2/auto-orient/strip|imageView2/2/w/1048/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-1433adc3fe1380e4.png?imageMogr2/auto-orient/strip|imageView2/2/w/1052/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-e79d07a719050453.png?imageMogr2/auto-orient/strip|imageView2/2/w/1076/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-ddac69cdd1a85881.png?imageMogr2/auto-orient/strip|imageView2/2/w/927/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-15a91eaf929bbcc9.png?imageMogr2/auto-orient/strip|imageView2/2/w/1097/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-6b28345f1aaaee23.png?imageMogr2/auto-orient/strip|imageView2/2/w/805/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-01a82f32fb4ba5a0.png?imageMogr2/auto-orient/strip|imageView2/2/w/1112/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/18616547-afcbd5bb73b0ab16.png?imageMogr2/auto-orient/strip|imageView2/2/w/1082/format/webp">
-<meta property="og:updated_time" content="2021-04-22T14:16:12.024Z">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_1.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_2.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_3.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_4.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_5.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_6.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_7.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_8.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_9.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_10.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_11.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_12.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_13.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_14.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_15.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_16.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_17.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_18.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_19.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_20.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_21.webp">
+<meta property="og:image" content="http://yoursite.com/2021/04/22/react_fiber/fiber_22.webp">
+<meta property="og:updated_time" content="2021-04-22T14:38:25.915Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图解 React Fiber 机制">
 <meta name="twitter:description" content="在我们去了解React Fiber之前，我们需要先了解到React的渲染机制，从而去探求为什么React会选择推出React Fiber来替换以前的模式。 React的渲染机制React会在内存中维护一棵虚拟的DOM树（V-DOM-TREE）。当数据(state)发生变化时，会自动更新虚拟DOM，生成一棵新的虚拟DOM树。通过 Diff 两棵树来找到变化的部分，从而得到一个更新的集合（Patch）">
@@ -393,7 +393,7 @@
                 
               
 
-              <time title="创建时间：2021-04-22 22:08:37 / 修改时间：22:16:12" itemprop="dateCreated datePublished" datetime="2021-04-22T22:08:37+08:00">2021-04-22</time>
+              <time title="创建时间：2021-04-22 22:08:37 / 修改时间：22:38:25" itemprop="dateCreated datePublished" datetime="2021-04-22T22:08:37+08:00">2021-04-22</time>
             
 
             
@@ -436,14 +436,14 @@
 <p><img src="https://pic1.zhimg.com/80/v2-de478ba837d05e597cbf629b176e2aac_1440w.jpg" alt="img"></p>
 <a id="more"></a>
 <h3 id="虚拟DOM"><a href="#虚拟DOM" class="headerlink" title="虚拟DOM"></a>虚拟DOM</h3><p>V-DOM（虚拟DOM）是对真实DOM的抽象，本质上是一个JS对象。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/18616547-74f4ef2b039eaf89.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/960/format/webp" alt="img"></p>
+<img src="/2021/04/22/react_fiber/fiber_1.webp">
 <ul>
 <li>传统的Web App通过和DOM的直接交互来构建和监听事件的发生，但是频繁的变动DOM会导致浏览器的回流或者重绘，影响性能。通过V-DOM，我们可以尽可能一次性将差异更新到DOM中，解决了部分性能问题</li>
 <li>通过V-DOM的抽象，我们将真实的渲染和逻辑的构建拆分开，更好的实现跨平台开发</li>
 </ul>
 <h2 id="React-Fiber之前的不足"><a href="#React-Fiber之前的不足" class="headerlink" title="React Fiber之前的不足"></a>React Fiber之前的不足</h2><p>在React16之前的版本，调节器(stack reconciler)更新DOM树的时候是采用自顶向下递归的方式，从根组件（首次渲染）或调用<code>setStatus</code>的组件开始去更新子节点。组件树越复杂，递归遍历的成本越高，再加上JS本身只运行在主线程，就会造成持续占用主线程。如果由于执行JS脚本耗费时间较多，就会导致主线程上的布局、动画等周期性任务以及交互任务无法立即处理，就会造成视觉上的卡顿。</p>
-<h3 id="浏览器的渲染"><a href="#浏览器的渲染" class="headerlink" title="浏览器的渲染"></a>浏览器的渲染</h3><p><img src="https://upload-images.jianshu.io/upload_images/18616547-cf46ef9ad4978c98.png?imageMogr2/auto-orient/strip|imageView2/2/w/1000/format/webp" alt="img"></p>
-<h3 id="耗时操作的参与"><a href="#耗时操作的参与" class="headerlink" title="耗时操作的参与"></a>耗时操作的参与</h3><p><img src="https://upload-images.jianshu.io/upload_images/18616547-45388b36477c49b7.png?imageMogr2/auto-orient/strip|imageView2/2/w/1000/format/webp" alt="img"></p>
+<h3 id="浏览器的渲染"><a href="#浏览器的渲染" class="headerlink" title="浏览器的渲染"></a>浏览器的渲染</h3><img src="/2021/04/22/react_fiber/fiber_2.webp">
+<h3 id="耗时操作的参与"><a href="#耗时操作的参与" class="headerlink" title="耗时操作的参与"></a>耗时操作的参与</h3><img src="/2021/04/22/react_fiber/fiber_3.webp">
 <p>正常的屏幕刷新率是60帧，即1秒钟绘制60帧画面。浏览器每一帧可能会做的工作，并且有对应的执行顺序：</p>
 <ul>
 <li>处理用户交互事件</li>
@@ -456,11 +456,11 @@
 <p>如果我们的JS代码持续占用主线程，就可能导致渲染下一帧去处理用户的交互事件不能立马处理，用户不能立马得到反馈，造成屏幕卡顿的感觉。</p>
 <h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>如果把渲染过程拆分成多个子任务，每次完成一小部分后，去询问是否还有剩余时间，如果有，则继续下一个任务；如果没有，挂起当前执行的任务，将控制权交给主线程，等待主线程空闲了或者优先级较高的任务执行结束后再继续执行。这种调度式的策略被称为合作式调度(Cooperative Scheduling)，也是操作系统常用的调度策略之一。</p>
 <h2 id="React-Fiber"><a href="#React-Fiber" class="headerlink" title="React Fiber"></a>React Fiber</h2><h3 id="什么是Fiber"><a href="#什么是Fiber" class="headerlink" title="什么是Fiber"></a>什么是Fiber</h3><p>基于上文的解决方案，在React中提出了将任务分解为单元，每一个单元就算作一个<code>Fiber</code>。通过按照优先级来调度子任务，分段来更新，将同步渲染转为异步渲染。即通过将渲染任务分解为单元后，根据优先级来使用API调度，异步执行指定任务。浏览器提供了一个<code>requestIdleCallback</code>的<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestIdleCallback" target="_blank" rel="noopener">API</a>，可以实现在主事件循环上执行后台和低优先级工作。但是其兼容性并不佳，所以React做了一个Polyfill，具体实现可以参考<a href="https://www.huaweicloud.com/articles/35350dd296b083c022e41a043caf6bdf.html" target="_blank" rel="noopener">该链接</a>。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/18616547-6380a17e15af8bd5.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp" alt="img"></p>
-<h3 id="Fiber的数据结构"><a href="#Fiber的数据结构" class="headerlink" title="Fiber的数据结构"></a>Fiber的数据结构</h3><h3 id="Fiber架构"><a href="#Fiber架构" class="headerlink" title="Fiber架构"></a>Fiber架构</h3><p>Stack-Recocilation(React 16以前)：JSX中创建（或更新）一些元素，react会根据这些元素创建（或更新）Virtual DOM，然后根据更新前后virtual DOM的区别，去修改真正的DOM。在stack reconciler下，DOM的更新是同步的，通过递归的方式进行渲染，发现一个或几个instance有更新，会立即执行DOM更新操作。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/18616547-16a29e59906706ac.png?imageMogr2/auto-orient/strip|imageView2/2/w/1133/format/webp" alt="img"></p>
+<img src="/2021/04/22/react_fiber/fiber_4.webp">
+<h3 id="Fiber架构"><a href="#Fiber架构" class="headerlink" title="Fiber架构"></a>Fiber架构</h3><p>Stack-Recocilation(React 16以前)：JSX中创建（或更新）一些元素，react会根据这些元素创建（或更新）Virtual DOM，然后根据更新前后virtual DOM的区别，去修改真正的DOM。在stack reconciler下，DOM的更新是同步的，通过递归的方式进行渲染，发现一个或几个instance有更新，会立即执行DOM更新操作。</p>
+<img src="/2021/04/22/react_fiber/fiber_5.webp">
 <p>Fiber-Recocilation：React 16版本提出了一个更先进的调和器，它允许渲染进程分段完成，而不是必须一次性完成，中间可以返回至主进程控制执行其他任务。而这是通过计算部分组件树的变更，并暂停渲染更新，询问主进程是否有更高需求的绘制或者更新任务需要执行，这些高需求的任务完成后才开始渲染。这一切的实现是在代码层引入了一个新的数据结构-Fiber对象，每一个组件实例对应有一个fiber实例，此fiber实例负责管理组件实例的更新，渲染任务及与其他fiber实例的联系。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/18616547-936a917b73170bfb.png?imageMogr2/auto-orient/strip|imageView2/2/w/840/format/webp" alt="img"></p>
+<img src="/2021/04/22/react_fiber/fiber_6.webp">
 <h3 id="Fiber的工作流程"><a href="#Fiber的工作流程" class="headerlink" title="Fiber的工作流程"></a>Fiber的工作流程</h3><p>在讲解Fiber的工作流程的时候，会涉及到几个关键概念：</p>
 <ul>
 <li>Fiber Tree</li>
@@ -470,39 +470,52 @@
 <p>我们将会在接下来的示例讲解中来了解这三个关键概念。</p>
 <ol>
 <li><p>当前页面包含一个列表，通过该列表渲染出一个button和一组Item，Item中包含一个div，其中的内容为数字。通过点击button，可以使列表中的所有数字进行平方。另外有一个按钮，点击可以调节字体大小。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/18616547-7f25f52285a69792.png?imageMogr2/auto-orient/strip|imageView2/2/w/678/format/webp" alt="img"></p>
+<img src="/2021/04/22/react_fiber/fiber_7.webp">
 </li>
 <li><p>页面渲染完成后，就会初始化生成一个Fiber Tree（下图中current）。还会维护一个workInProgressTree。workInProgressTree用于计算更新，完成reconciliation过程。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/18616547-55dd868a1b70d193.png?imageMogr2/auto-orient/strip|imageView2/2/w/653/format/webp" alt="img"></p>
+<img src="/2021/04/22/react_fiber/fiber_8.webp">
 </li>
 <li><p>用户点击平方按钮后，利用各个元素平方后的list调用setState，react会把当前的更新送入list组件对应的update queue中。但是react并不会立即执行对比并修改DOM的操作。而是交给scheduler去处理。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/18616547-7a89bfac109c387a.png?imageMogr2/auto-orient/strip|imageView2/2/w/748/format/webp" alt="img"></p>
+<img src="/2021/04/22/react_fiber/fiber_9.webp">
 </li>
-<li><p>Scheduler会调用<code>reqeustIdelCallback</code>去请求空闲期的时间来处理任务<br><img src="https://upload-images.jianshu.io/upload_images/18616547-3d7d92f6464dfa99.png?imageMogr2/auto-orient/strip|imageView2/2/w/854/format/webp" alt="img"><br><img src="https://upload-images.jianshu.io/upload_images/18616547-edc620ea98f5cc1d.png?imageMogr2/auto-orient/strip|imageView2/2/w/854/format/webp" alt="img"></p>
+<li><p>Scheduler会调用<code>reqeustIdelCallback</code>去请求空闲期的时间来处理任务</p>
+<img src="/2021/04/22/react_fiber/fiber_10.webp">
+<img src="/2021/04/22/react_fiber/fiber_11.webp">
 </li>
-<li><p>因为根节点上的更新队列为空，所以直接从fiber-tree上将根节点复制到workInProgressTree中去。根节点中包含指向子节点（List）的指针。<br><img src="https://upload-images.jianshu.io/upload_images/18616547-5a6f447132446ebc.png?imageMogr2/auto-orient/strip|imageView2/2/w/763/format/webp" alt="img"></p>
+<li><p>因为根节点上的更新队列为空，所以直接从fiber-tree上将根节点复制到workInProgressTree中去。根节点中包含指向子节点（List）的指针。</p>
+<img src="/2021/04/22/react_fiber/fiber_12.webp">
 </li>
-<li><p>根节点没有什么更新操作，根据其child指针，接下来把List节点及其对应的update queue也复制到workinprogress中。List插入后，向其父节点返回，标志根节点的处理完成。<br><img src="https://upload-images.jianshu.io/upload_images/18616547-0df5618f46cf63ea.png?imageMogr2/auto-orient/strip|imageView2/2/w/872/format/webp" alt="img"></p>
+<li><p>根节点没有什么更新操作，根据其child指针，接下来把List节点及其对应的update queue也复制到workinprogress中。List插入后，向其父节点返回，标志根节点的处理完成。</p>
+<img src="/2021/04/22/react_fiber/fiber_13.webp">
 </li>
-<li><p>根节点处理完成后，react此时检查时间片是否用完。如果没有用完，根据其保存的下个工作单元的信息开始处理下一个节点List。<br><img src="https://upload-images.jianshu.io/upload_images/18616547-09d9037d1f9e194e.png?imageMogr2/auto-orient/strip|imageView2/2/w/806/format/webp" alt="img"></p>
+<li><p>根节点处理完成后，react此时检查时间片是否用完。如果没有用完，根据其保存的下个工作单元的信息开始处理下一个节点List。</p>
+<img src="/2021/04/22/react_fiber/fiber_14.webp">
 </li>
-<li><p>在获取到最新的state值后，react会更新List的state和props值，调用render，然后得到一组通过更新后的list值生成的<strong>elements</strong>。<br><img src="https://upload-images.jianshu.io/upload_images/18616547-03003b0b6892ddf7.png?imageMogr2/auto-orient/strip|imageView2/2/w/1048/format/webp" alt="img"></p>
+<li><p>在获取到最新的state值后，react会更新List的state和props值，调用render，然后得到一组通过更新后的list值生成的<strong>elements</strong>。</p>
+<img src="/2021/04/22/react_fiber/fiber_15.webp">
 </li>
-<li><p>button没有任何子节点，所以此时可以返回，并标志button处理完成。如果button有改变，需要打上tag，但是当前情况没有，只需要标记完成即可。<br><img src="https://upload-images.jianshu.io/upload_images/18616547-1433adc3fe1380e4.png?imageMogr2/auto-orient/strip|imageView2/2/w/1052/format/webp" alt="img"></p>
+<li><p>button没有任何子节点，所以此时可以返回，并标志button处理完成。如果button有改变，需要打上tag，但是当前情况没有，只需要标记完成即可。</p>
+<img src="/2021/04/22/react_fiber/fiber_16.webp">
 </li>
-<li><p>第二个Item shouldComponentUpdate返回true，所以需要打上tag，标志需要更新，复制div，调用render，讲div中的内容从2更新为4，因为div有更新，所以标记div。当前节点处理完成。<br><img src="https://upload-images.jianshu.io/upload_images/18616547-e79d07a719050453.png?imageMogr2/auto-orient/strip|imageView2/2/w/1076/format/webp" alt="img"></p>
+<li><p>第二个Item shouldComponentUpdate返回true，所以需要打上tag，标志需要更新，复制div，调用render，讲div中的内容从2更新为4，因为div有更新，所以标记div。当前节点处理完成。</p>
+<img src="/2021/04/22/react_fiber/fiber_17.webp">
 </li>
-<li><p>下一个工作单元是Item，在进入Item之前，检查时间。但这个时候时间用完了。此时react必须交换主线程，并告诉主线程以后要为其分配时间以完成剩下的操作。<br><img src="https://upload-images.jianshu.io/upload_images/18616547-ddac69cdd1a85881.png?imageMogr2/auto-orient/strip|imageView2/2/w/927/format/webp" alt="img"></p>
+<li><p>下一个工作单元是Item，在进入Item之前，检查时间。但这个时候时间用完了。此时react必须交换主线程，并告诉主线程以后要为其分配时间以完成剩下的操作。</p>
+<img src="/2021/04/22/react_fiber/fiber_18.webp">
 </li>
-<li><p>当主线程任务结束，处于空闲状态，则开始执行react剩下的操作，跟上一个Item的处理流程几乎一样，完成整个fiber-tree和workInProgress的更新<br><img src="https://upload-images.jianshu.io/upload_images/18616547-15a91eaf929bbcc9.png?imageMogr2/auto-orient/strip|imageView2/2/w/1097/format/webp" alt="img"></p>
+<li><p>当主线程任务结束，处于空闲状态，则开始执行react剩下的操作，跟上一个Item的处理流程几乎一样，完成整个fiber-tree和workInProgress的更新</p>
+<img src="/2021/04/22/react_fiber/fiber_19.webp">
 </li>
-<li><p>完成后，Item向List返回并merge effect。<br><img src="https://upload-images.jianshu.io/upload_images/18616547-6b28345f1aaaee23.png?imageMogr2/auto-orient/strip|imageView2/2/w/805/format/webp" alt="img"></p>
+<li><p>完成后，Item向List返回并merge effect。</p>
+<img src="/2021/04/22/react_fiber/fiber_20.webp">
 </li>
-<li><p>此时List向根节点返回并merge effect，所有节点都可以标记完成了。此时react将workInProgress标记为pendingCommit。<br><img src="https://upload-images.jianshu.io/upload_images/18616547-01a82f32fb4ba5a0.png?imageMogr2/auto-orient/strip|imageView2/2/w/1112/format/webp" alt="img"></p>
+<li><p>此时List向根节点返回并merge effect，所有节点都可以标记完成了。此时react将workInProgress标记为pendingCommit。</p>
+<img src="/2021/04/22/react_fiber/fiber_21.webp">
 </li>
 <li><p>此时，要做的是还是检查时间够不够用，如果没有时间，会等到时间再去提交修改到DOM。进入到阶段2后，reacDOM会根据阶段1计算出来的effect-list来更新DOM。</p>
 </li>
-<li><p>更新完DOM之后，workInProgress就完全和DOM保持一致了，为了让当前的fiber-tree和DOM保持一直，react交换了current和workinProgress两个指针<br><img src="https://upload-images.jianshu.io/upload_images/18616547-afcbd5bb73b0ab16.png?imageMogr2/auto-orient/strip|imageView2/2/w/1082/format/webp" alt="img"></p>
+<li><p>更新完DOM之后，workInProgress就完全和DOM保持一致了，为了让当前的fiber-tree和DOM保持一直，react交换了current和workinProgress两个指针</p>
+<img src="/2021/04/22/react_fiber/fiber_22.webp">
 </li>
 </ol>
 <p>至此，整个更新操作就结束了。刚才的三个概念 Fiber Tree，WorkInProgress Tree，Effects List 在其中发挥的作用是否清楚了。我们再来归纳一下：</p>
@@ -521,7 +534,7 @@
 <li>即使WIP的构建中出现问题，也不影响Fiber Tree的结构，仍然可以沿用旧树的节点，从而不影响View</li>
 </ul>
 <p>Dan在React 16的演讲中用了一个比喻，<strong>你可以将 WIP 树想象成从旧树中 Fork 出来的功能分支，你在这新分支中添加或移除特性，即使是操作失误也不会影响旧的分支。当你这个分支经过了测试和完善，就可以合并到旧分支，将其替换掉.</strong> 这或许也是命令为<strong>提交(Commite)阶段</strong>的原因。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>React Fiber提供的功能主要是：</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>React Fiber提供的功能主要是：</p>
 <ul>
 <li>可切分，可中断任务。</li>
 <li>可重用各分阶段任务，且可以设置优先级。</li>
@@ -787,7 +800,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#React的渲染机制"><span class="nav-number">1.</span> <span class="nav-text">React的渲染机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#虚拟DOM"><span class="nav-number">1.1.</span> <span class="nav-text">虚拟DOM</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#React-Fiber之前的不足"><span class="nav-number">2.</span> <span class="nav-text">React Fiber之前的不足</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器的渲染"><span class="nav-number">2.1.</span> <span class="nav-text">浏览器的渲染</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#耗时操作的参与"><span class="nav-number">2.2.</span> <span class="nav-text">耗时操作的参与</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案"><span class="nav-number">2.3.</span> <span class="nav-text">解决方案</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#React-Fiber"><span class="nav-number">3.</span> <span class="nav-text">React Fiber</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Fiber"><span class="nav-number">3.1.</span> <span class="nav-text">什么是Fiber</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fiber的数据结构"><span class="nav-number">3.2.</span> <span class="nav-text">Fiber的数据结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fiber架构"><span class="nav-number">3.3.</span> <span class="nav-text">Fiber架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fiber的工作流程"><span class="nav-number">3.4.</span> <span class="nav-text">Fiber的工作流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#任务分片的优先级"><span class="nav-number">3.5.</span> <span class="nav-text">任务分片的优先级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双缓冲原理"><span class="nav-number">3.6.</span> <span class="nav-text">双缓冲原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">3.7.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#React的渲染机制"><span class="nav-number">1.</span> <span class="nav-text">React的渲染机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#虚拟DOM"><span class="nav-number">1.1.</span> <span class="nav-text">虚拟DOM</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#React-Fiber之前的不足"><span class="nav-number">2.</span> <span class="nav-text">React Fiber之前的不足</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器的渲染"><span class="nav-number">2.1.</span> <span class="nav-text">浏览器的渲染</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#耗时操作的参与"><span class="nav-number">2.2.</span> <span class="nav-text">耗时操作的参与</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案"><span class="nav-number">2.3.</span> <span class="nav-text">解决方案</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#React-Fiber"><span class="nav-number">3.</span> <span class="nav-text">React Fiber</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Fiber"><span class="nav-number">3.1.</span> <span class="nav-text">什么是Fiber</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fiber架构"><span class="nav-number">3.2.</span> <span class="nav-text">Fiber架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fiber的工作流程"><span class="nav-number">3.3.</span> <span class="nav-text">Fiber的工作流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#任务分片的优先级"><span class="nav-number">3.4.</span> <span class="nav-text">任务分片的优先级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双缓冲原理"><span class="nav-number">3.5.</span> <span class="nav-text">双缓冲原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
